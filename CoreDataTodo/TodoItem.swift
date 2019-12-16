@@ -16,8 +16,7 @@ public class TodoItem: NSManagedObject, Identifiable {
 
 extension TodoItem {
     static func getAllTodoItems() -> NSFetchRequest<TodoItem> {
-        let request: NSFetchRequest<TodoItem> = TodoItem.fetchRequest() as!
-            NSFetchRequest<TodoItem>
+        let request: NSFetchRequest<TodoItem> = NSFetchRequest<TodoItem>(entityName: "TodoItem")
         
         let sortDescriptor = NSSortDescriptor(key: "createdAt", ascending: true)
         

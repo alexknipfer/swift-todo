@@ -9,8 +9,40 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(\.managedObjectContext) var managedObjectContext
+    @FetchRequest(fetchRequest: TodoItem.getAllTodoItems()) var todoItems: FetchedResults<TodoItem>
+    
+    @State private var newTodoItem = ""
+    
     var body: some View {
-        Text("Hello, World!")
+        NavigationView {
+            List {
+                Section(header: Text("What's next?")) {
+                    HStack {
+                        TextField("New item", text: self.$newTodoItem)
+                        Button(action: {
+                            let todoItem = TodoItem(context: self.managedObjectContext)
+                            todoItem.title = self.newTodoItem
+                            todoItem.createdAt = Date()
+                            
+                            do {
+                                try self.managedObjectContext.save()
+                            } catch {
+                                print(error)
+                            }
+                            
+                            self.newTodoItem = ""
+                        }) {
+                            Image(systemName: "plus.circle.fill")
+                                .foregroundColor(.green)
+                                .imageScale(.large)
+                        }
+                    }
+                }.font(.headline)
+            }
+            .navigationBarTitle(Text("My List"))
+            .navigationBarItems(trailing: EditButton())
+        }
     }
 }
 
