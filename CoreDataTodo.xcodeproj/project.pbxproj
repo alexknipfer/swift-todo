@@ -15,6 +15,7 @@
 		1310CB2C23A6F217005CE992 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1310CB2B23A6F217005CE992 /* Preview Assets.xcassets */; };
 		1310CB2F23A6F217005CE992 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1310CB2D23A6F217005CE992 /* LaunchScreen.storyboard */; };
 		1310CB3723A6F2D7005CE992 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1310CB3623A6F2D7005CE992 /* TodoItem.swift */; };
+		132D1BFC23AB26A900FA2E69 /* TodoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132D1BFB23AB26A900FA2E69 /* TodoItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		1310CB2E23A6F217005CE992 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1310CB3023A6F217005CE992 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1310CB3623A6F2D7005CE992 /* TodoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
+		132D1BFB23AB26A900FA2E69 /* TodoItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				1310CB1F23A6F216005CE992 /* AppDelegate.swift */,
 				1310CB2123A6F216005CE992 /* SceneDelegate.swift */,
 				1310CB2623A6F216005CE992 /* ContentView.swift */,
+				132D1BFB23AB26A900FA2E69 /* TodoItemView.swift */,
 				1310CB3623A6F2D7005CE992 /* TodoItem.swift */,
 				1310CB2823A6F217005CE992 /* Assets.xcassets */,
 				1310CB2D23A6F217005CE992 /* LaunchScreen.storyboard */,
@@ -157,6 +160,7 @@
 				1310CB2223A6F216005CE992 /* SceneDelegate.swift in Sources */,
 				1310CB2723A6F216005CE992 /* ContentView.swift in Sources */,
 				1310CB2523A6F216005CE992 /* CoreDataTodo.xcdatamodeld in Sources */,
+				132D1BFC23AB26A900FA2E69 /* TodoItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
